@@ -4,21 +4,27 @@ class Form extends Component {
   state = {
     name: '',
     id: '',
+    number: '',
   };
-  handleChange = e => {
-    const { name, value } = e.currentTarget;
-    this.setState({ [name]: value, id: uuidv4() });
+  handleChangeName = e => {
+    const { name, value, number } = e.currentTarget;
+    this.setState({ id: uuidv4(), [name]: value, [number]: value });
   };
   handleSubmit = e => {
     e.preventDefault();
+
     this.props.onSubmit(this.state);
+    this.resetForm();
   };
-  //   resetForm = () => {
-  //     this.props.onReset(this.name);
-  //     this.name = 'name';
-  //   };
+  handleChangeNumber = e => {
+    const { name, value } = e.currentTarget;
+    this.setState({ [name]: value });
+  };
+  resetForm = () => {
+    this.setState({ name: '', number: '' });
+  };
   render() {
-    const { name } = this.state;
+    const { name, number } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
@@ -27,7 +33,16 @@ class Form extends Component {
             type="text"
             name="name"
             value={name}
-            onChange={this.handleChange}
+            onChange={this.handleChangeName}
+          ></input>
+        </label>
+        <label>
+          Number
+          <input
+            type="tel"
+            name="number"
+            value={number}
+            onChange={this.handleChangeNumber}
           ></input>
         </label>
         <button type="submit">add contact</button>

@@ -1,10 +1,9 @@
 import React from 'react';
+import ContactListItem from '../ContactListItem';
 
-const ContactList = ({ contacts }) => (
+const ContactList = ({ contacts, onDeleteContact }) => (
   <ul>
-    {contacts.map(
-      ({ id, name }) => (console.log(name), (<li key={id}>{name}</li>)),
-    )}
+    <ContactListItem contacts={contacts} onDeleteContact={onDeleteContact} />
   </ul>
 );
 export default ContactList;
