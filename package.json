@@ -2,7 +2,7 @@
   "name": "hw3",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kooker22.github.io/reactHW2",
+  "homepage": "https://kooker22.github.io/React-homework2-task2",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

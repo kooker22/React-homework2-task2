@@ -6,4 +6,5 @@ const ContactList = ({ contacts, onDeleteContact }) => (
     <ContactListItem contacts={contacts} onDeleteContact={onDeleteContact} />
   </ul>
 );
+
 export default ContactList;

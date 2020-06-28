@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 import Form from './components/Form';
 import ContactList from './components/ContactList';
 import 'modern-normalize/modern-normalize.css';
 import Filter from './components/Filter/Filter';
+import styles from './App.module.css';
 
 class Phonebook extends Component {
+  static defaultProps = {
+    filter: '',
+  };
+  static propTypes = {
+    contacts: propTypes.arrayOf(
+      propTypes.exact({
+        id: propTypes.string.isRequired,
+        name: propTypes.string.isRequired,
+        number: propTypes.string.isRequired,
+      }),
+    ),
+    filter: propTypes.string.isRequired,
+  };
   state = {
     contacts: [
       { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
@@ -24,9 +39,10 @@ class Phonebook extends Component {
     this.setState({ filter: e.currentTarget.value });
   };
   notifyExistingName = data => {
-    const aaa = this.state.contacts.find(contact => contact.name === data.name);
-    if (aaa) {
-      this.setState(this.state);
+    const existingName = this.state.contacts.find(
+      contact => contact.name === data.name,
+    );
+    if (existingName) {
       alert(`${data.name} is already in contacts`);
     } else {
       this.setState({ contacts: [...this.state.contacts, data] });
@@ -48,18 +64,22 @@ class Phonebook extends Component {
 
     return (
       <>
-        <h1>Phonebook</h1>
-        <Form onSubmit={this.formSubmitHandler} />
-        <Filter
-          contacts={contacts}
-          value={filter}
-          onChange={this.changeFilter}
-        />
-        <h2>Contacts</h2>
-        <ContactList
-          contacts={visibleContacts}
-          onDeleteContact={this.deleteContact}
-        />
+        <div className={styles.container}>
+          <h1 className={styles.contents}>Phonebook</h1>
+          <div className={styles.wrapper}>
+            <Form onSubmit={this.formSubmitHandler} />
+            <Filter
+              contacts={contacts}
+              value={filter}
+              onChange={this.changeFilter}
+            />
+          </div>
+          <h2 className={styles.contents}>Contacts</h2>
+          <ContactList
+            contacts={visibleContacts}
+            onDeleteContact={this.deleteContact}
+          />
+        </div>
       </>
     );
   }
