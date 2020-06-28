@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import Form from './components/Form';
 import ContactList from './components/ContactList';
 import 'modern-normalize/modern-normalize.css';
-import Filter from './components/Filter/Filter';
+import Filter from './components/Filter/';
 import styles from './App.module.css';
 
 class Phonebook extends Component {
@@ -32,8 +32,6 @@ class Phonebook extends Component {
 
   formSubmitHandler = data => {
     this.notifyExistingName(data);
-    // this.setState({ contacts: [...this.state.contacts, data] });
-    console.log(this.state);
   };
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
@@ -52,8 +50,6 @@ class Phonebook extends Component {
     this.setState(prevState => ({
       contacts: prevState.contacts.filter(contact => contact.id !== deleteId),
     }));
-
-    // console.log(contactForDelete);
   };
   render() {
     const { contacts, filter } = this.state;

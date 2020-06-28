@@ -64,6 +64,4 @@ class Form extends Component {
     );
   }
 }
-
 export default Form;
-// disabled={this.disableToggle}
