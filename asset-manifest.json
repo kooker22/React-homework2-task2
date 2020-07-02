@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/React-homework2-task2/static/css/main.bccc2a8d.chunk.css",
-    "main.js": "/React-homework2-task2/static/js/main.38ace935.chunk.js",
-    "main.js.map": "/React-homework2-task2/static/js/main.38ace935.chunk.js.map",
+    "main.js": "/React-homework2-task2/static/js/main.20ac8723.chunk.js",
+    "main.js.map": "/React-homework2-task2/static/js/main.20ac8723.chunk.js.map",
     "runtime-main.js": "/React-homework2-task2/static/js/runtime-main.44c24f23.js",
     "runtime-main.js.map": "/React-homework2-task2/static/js/runtime-main.44c24f23.js.map",
     "static/css/2.4b502e0b.chunk.css": "/React-homework2-task2/static/css/2.4b502e0b.chunk.css",
-    "static/js/2.174ee71c.chunk.js": "/React-homework2-task2/static/js/2.174ee71c.chunk.js",
-    "static/js/2.174ee71c.chunk.js.map": "/React-homework2-task2/static/js/2.174ee71c.chunk.js.map",
+    "static/js/2.4d44307b.chunk.js": "/React-homework2-task2/static/js/2.4d44307b.chunk.js",
+    "static/js/2.4d44307b.chunk.js.map": "/React-homework2-task2/static/js/2.4d44307b.chunk.js.map",
     "index.html": "/React-homework2-task2/index.html",
-    "precache-manifest.abbd76169c8c8ad8a9f620db6905bc0b.js": "/React-homework2-task2/precache-manifest.abbd76169c8c8ad8a9f620db6905bc0b.js",
+    "precache-manifest.acd3c5c7cebc21c979001fbddee1ae64.js": "/React-homework2-task2/precache-manifest.acd3c5c7cebc21c979001fbddee1ae64.js",
     "service-worker.js": "/React-homework2-task2/service-worker.js",
     "static/css/2.4b502e0b.chunk.css.map": "/React-homework2-task2/static/css/2.4b502e0b.chunk.css.map",
     "static/css/main.bccc2a8d.chunk.css.map": "/React-homework2-task2/static/css/main.bccc2a8d.chunk.css.map",
-    "static/js/2.174ee71c.chunk.js.LICENSE.txt": "/React-homework2-task2/static/js/2.174ee71c.chunk.js.LICENSE.txt",
+    "static/js/2.4d44307b.chunk.js.LICENSE.txt": "/React-homework2-task2/static/js/2.4d44307b.chunk.js.LICENSE.txt",
     "static/media/icon.41d96933.svg": "/React-homework2-task2/static/media/icon.41d96933.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.44c24f23.js",
     "static/css/2.4b502e0b.chunk.css",
-    "static/js/2.174ee71c.chunk.js",
+    "static/js/2.4d44307b.chunk.js",
     "static/css/main.bccc2a8d.chunk.css",
-    "static/js/main.38ace935.chunk.js"
+    "static/js/main.20ac8723.chunk.js"
   ]
 }
