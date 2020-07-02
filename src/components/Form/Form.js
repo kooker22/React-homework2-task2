@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+
 import propTypes from 'prop-types';
 import styles from './Form.module.css';
 class Form extends Component {
@@ -8,51 +8,46 @@ class Form extends Component {
   };
   state = {
     name: '',
-    id: '',
     number: '',
   };
-  handleChangeName = e => {
-    const { name, value, number } = e.currentTarget;
 
-    this.setState({ id: uuidv4(), [name]: value, [number]: value });
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({ [name]: value });
   };
   handleSubmit = e => {
     e.preventDefault();
-
     this.props.onSubmit(this.state);
     this.resetForm();
   };
-  handleChangeNumber = e => {
-    const { name, value } = e.currentTarget;
-    this.setState({ [name]: value });
-  };
+
   resetForm = () => {
     this.setState({ name: '', number: '' });
   };
 
   render() {
     const { name, number } = this.state;
+
     return (
       <form onSubmit={this.handleSubmit} className={styles.form}>
         <div className={styles.inputWrapper}>
-          <label className={styles.label}>
+          <label htmlFor={this.inputId} className={styles.label}>
             Name
             <input
               type="text"
               name="name"
               value={name}
-              onChange={this.handleChangeName}
+              onChange={this.handleChange}
               className={styles.input}
             ></input>
           </label>
 
-          <label>
+          <label htmlFor={this.numberId}>
             Number
             <input
               type="tel"
               name="number"
               value={number}
-              onChange={this.handleChangeNumber}
+              onChange={this.handleChange}
               className={styles.input}
             ></input>
           </label>
