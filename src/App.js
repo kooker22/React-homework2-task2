@@ -1,10 +1,13 @@
+//Core
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import 'modern-normalize/modern-normalize.css';
+//Components
 import Form from './components/Form';
 import ContactList from './components/ContactList';
-import 'modern-normalize/modern-normalize.css';
 import Filter from './components/Filter/';
-import styles from './App.module.css';
+
+//Instruments
 import { v4 as uuidv4 } from 'uuid';
 
 class Phonebook extends Component {
@@ -66,9 +69,9 @@ class Phonebook extends Component {
 
     return (
       <>
-        <div className={styles.container}>
-          <h1 className={styles.contents}>Phonebook</h1>
-          <div className={styles.wrapper}>
+        <div className="container">
+          <h1 className="contents">Phonebook</h1>
+          <div className="wrapper">
             <Form onSubmit={this.formSubmitHandler} />
             <Filter
               contacts={contacts}
@@ -76,7 +79,7 @@ class Phonebook extends Component {
               onChange={this.changeFilter}
             />
           </div>
-          <h2 className={styles.contents}>Contacts</h2>
+          <h2 className="contents">Contacts</h2>
           <ContactList
             contacts={visibleContacts}
             onDeleteContact={this.deleteContact}
